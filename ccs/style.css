@@ -1,0 +1,250 @@
+@font-face {
+    font-family:"Alfa" ;
+    src: url(../assets/fuentes/AlfaSlabOne-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#grilla {
+   width: 100vw;
+   height: 100vh;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 0.5fr 1fr 1fr 0.5fr;
+   grid-template-areas: 
+   "header header"
+   "nav nav"
+   "main main"
+   "main main"
+   "footer footer";
+   
+
+}
+
+ header {
+    background-color: #2B78E4;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr ;
+    justify-items: center;
+    
+ }
+ .textoHeader{
+   font-family: Alfa;
+   font-size: 5rem;
+   font-weight:bold;
+ }
+ .textoHeader2{
+   font-family: Alfa;
+   font-size: 2rem;
+   font-weight:bold;
+ }
+ main {
+   
+    grid-area: main;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:1fr 1fr;
+    grid-template-areas: 
+    "sectuno sectdos"
+    "sectuno sectdos"
+    ;
+  
+    
+
+ }
+
+ #section-uno{
+    width: 100%;
+    background-color:#2B78E4;
+    grid-area: sectuno ;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    /* grid-column-gap: 10px; */
+   
+    align-items: center;
+    justify-items: center;
+    font-size: 1.5rem;
+    font-family: Alfa;
+}
+
+.marcas{
+   width: 150px;
+   height: 100px;
+}
+
+ #section-dos{
+    width: 100%;
+    background-color: #2B78E4;
+    grid-area: sectdos;
+    display: grid;
+    grid-template-columns: auto;
+    align-content: center;
+    justify-content: center;
+   
+ }
+ .imagenInicio{
+   width: 500px;
+   height: 400px;
+ }
+
+
+
+ nav {
+    background-color: #2B78E4;
+    grid-area: nav;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+ }
+
+ nav span ul a{
+    
+   background-color:black;
+   margin: 1px 1px 1px 1px;
+   padding: 2px 2px 2px 2px;
+   border-style: solid;
+   border-width: 2px;
+   border-color: black;
+   
+}
+
+.reseteoListas a:link,
+a:visited,
+a:active {
+   text-decoration:rgb(204, 130, 20);
+   list-style-type:none;
+   font-family: Alfa;
+   color: white;
+}
+
+
+ footer {
+    grid-area: footer;
+    background-color: #2B78E4;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+ }
+
+ .logosFooter{
+   width: 75px;
+   height: 75px;
+ }
+ .redesSociales{
+   animation-name: mover;
+   animation-duration: 1s;
+}
+@keyframes mover{
+   from{
+       opacity: 1;
+   }to{
+       opacity: 0;
+   }
+}
+
+@media only screen and (max-width:1400px){
+
+}
+@media only screen and (max-width:1200px){
+   #section-uno{
+    
+      font-size: 1.2rem;
+      font-family: Alfa;
+  }
+   
+   .imagenInicio{
+      width: 400px;
+      height: 300px;
+    }
+}
+
+@media only screen and (max-width:1024px){
+
+}
+@media only screen and (max-width:768px){
+   #section-uno{
+   
+      font-size: 1rem;
+      font-family: Alfa;
+  }
+  .imagenInicio{
+   width: 350px;
+   height: 250px;
+ }
+}
+@media only screen and (max-width:600px){
+   
+   
+   .textoHeader{
+     font-family: Alfa;
+     font-size: 4rem;
+     font-weight:bold;
+   }
+   .textoHeader2{
+     font-family: Alfa;
+     font-size: 1.5rem;
+     font-weight:bold;
+   }
+   
+   .imagenInicio{
+      width: 300px;
+      height: 200px;
+    }
+    #section-uno{
+      
+      font-size: 0.9rem;
+      font-family: Alfa;
+  }
+}
+
+@media only screen and (max-width:480px){
+   .imagenInicio{
+      width: 250px;
+      height: 150px;
+    }
+    #section-uno{
+     
+      font-size: 0.7rem;
+      font-family: Alfa;
+  }
+  .logosFooter{
+   width: 65px;
+   height: 65px;
+ }
+
+}
+
+@media only screen and (max-width:320px){
+
+   #grilla {
+      width: 100vw;
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 0.5fr 1fr 1fr 0.5fr;
+      grid-template-areas: 
+      "header"
+      "nav"
+      "main"
+      "main"
+      "footer";
+   }
+
+   .imagenInicio{
+      width: 180px;
+      height: 100px;
+    }
+   
+
+   .logosFooter{
+      width: 55px;
+      height: 55px;
+    }
+}
